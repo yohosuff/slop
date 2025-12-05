@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Defender - Action Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🚀 Space Defender</h1>
+            <div class="stats">
+                <span id="score">Score: 0</span>
+                <span id="lives">Lives: 3</span>
+                <span id="level">Level: 1</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="gameOver" class="overlay hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+        <div id="startScreen" class="overlay">
+            <h2>🚀 Space Defender</h2>
+            <p>Defend Earth from the alien invasion!</p>
+            <div class="instructions">
+                <p><strong>Controls:</strong></p>
+                <p>⬅️ ➡️ Arrow Keys or A/D - Move</p>
+                <p>SPACE - Shoot</p>
+            </div>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
