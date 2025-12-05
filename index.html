@@ -570,6 +570,7 @@
         document.querySelectorAll('button').forEach(btn => {
             btn.addEventListener('touchend', function(event) {
                 event.preventDefault();
+                this.click();
             }, { passive: false });
         });
     </script>
