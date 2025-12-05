@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 Dice Roller</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="dice-count">Number of Dice:</label>
+                <input type="number" id="dice-count" min="1" max="10" value="1">
+            </div>
+            
+            <div class="control-group">
+                <label for="dice-sides">Sides per Die:</label>
+                <select id="dice-sides">
+                    <option value="4">D4</option>
+                    <option value="6" selected>D6</option>
+                    <option value="8">D8</option>
+                    <option value="10">D10</option>
+                    <option value="12">D12</option>
+                    <option value="20">D20</option>
+                    <option value="100">D100</option>
+                </select>
+            </div>
+        </div>
+        
+        <button id="roll-btn" class="roll-button">Roll Dice!</button>
+        
+        <div class="results" id="results">
+            <div class="dice-container" id="dice-container"></div>
+            <div class="total" id="total"></div>
+        </div>
+        
+        <div class="history" id="history">
+            <h3>Roll History</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    
+    <script src="dice.js"></script>
+</body>
+</html>
