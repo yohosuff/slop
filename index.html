@@ -566,12 +566,8 @@
             createConfetti();
         }
 
-        // Prevent zooming on double tap only for game buttons
-        document.querySelectorAll('button').forEach(btn => {
-            btn.addEventListener('touchend', function(event) {
-                event.preventDefault();
-            }, { passive: false });
-        });
+        // Note: touch-action: manipulation on buttons handles double-tap zoom prevention
+        // No additional touchend handlers needed - they can interfere with click events on some browsers
     </script>
 </body>
 </html>
