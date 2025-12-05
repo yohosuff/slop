@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Mastery - Fun Addition & Subtraction!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🎉 Math Mastery! 🎉</h1>
+            <p class="subtitle">Let's Have Fun with Numbers!</p>
+        </header>
+
+        <div class="score-board">
+            <div class="score-item">
+                <span class="star">⭐</span>
+                <span id="score">0</span> Stars
+            </div>
+            <div class="score-item">
+                <span class="streak-icon">🔥</span>
+                <span id="streak">0</span> in a row!
+            </div>
+        </div>
+
+        <div class="game-mode-selector">
+            <button class="mode-btn active" data-mode="addition">➕ Addition</button>
+            <button class="mode-btn" data-mode="subtraction">➖ Subtraction</button>
+            <button class="mode-btn" data-mode="mixed">🎲 Mixed</button>
+        </div>
+
+        <div class="problem-area">
+            <div class="problem">
+                <span id="num1" class="number">5</span>
+                <span id="operator" class="operator">+</span>
+                <span id="num2" class="number">3</span>
+                <span class="equals">=</span>
+                <span id="answer-display" class="answer-box">?</span>
+            </div>
+        </div>
+
+        <div class="visual-helper" id="visual-helper">
+            <!-- Visual representations will be added here -->
+        </div>
+
+        <div class="answer-buttons" id="answer-buttons">
+            <!-- Answer buttons will be generated dynamically -->
+        </div>
+
+        <div class="feedback" id="feedback">
+            <span class="feedback-emoji" id="feedback-emoji"></span>
+            <span class="feedback-text" id="feedback-text"></span>
+        </div>
+
+        <div class="progress-section">
+            <h3>Your Progress Today</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p><span id="correct-count">0</span> out of <span id="total-count">0</span> correct</p>
+        </div>
+
+        <button class="help-btn" id="help-btn">🤔 Need Help?</button>
+    </div>
+
+    <div class="celebration" id="celebration">
+        <!-- Confetti animation will show here -->
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
