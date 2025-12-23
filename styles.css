@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    padding: 30px;
+}
+
+.game-area {
+    margin-bottom: 30px;
+}
+
+.score-panel {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.score-item {
+    text-align: center;
+}
+
+.score-item .label {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.score-item .value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.difficulty-selector {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.difficulty-selector label {
+    font-weight: 600;
+    margin-right: 10px;
+    color: #555;
+}
+
+.difficulty-selector select {
+    padding: 8px 20px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.difficulty-selector select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.play-area {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.speak-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    margin-bottom: 20px;
+}
+
+.speak-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.speak-btn:active {
+    transform: translateY(0);
+}
+
+.hint-container {
+    margin-bottom: 20px;
+}
+
+.hint-btn {
+    background: #ffc107;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-right: 10px;
+}
+
+.hint-btn:hover {
+    background: #e0a800;
+}
+
+.hint-text {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#spellingInput {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 280px;
+    transition: border-color 0.3s;
+}
+
+#spellingInput:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.submit-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+.feedback {
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-height: 30px;
+    padding: 10px;
+}
+
+.feedback.correct {
+    color: #28a745;
+}
+
+.feedback.incorrect {
+    color: #dc3545;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.control-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.skip-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.skip-btn:hover {
+    background: #5a6268;
+}
+
+.new-game-btn {
+    background: #17a2b8;
+    color: white;
+}
+
+.new-game-btn:hover {
+    background: #138496;
+}
+
+.history-panel {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.history-panel h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+#historyList {
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#historyList li {
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+#historyList li.correct {
+    background: #d4edda;
+    color: #155724;
+}
+
+#historyList li.incorrect {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+#historyList li.skipped {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+footer {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .input-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #spellingInput {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .control-btn {
+        width: 100%;
+    }
+}
